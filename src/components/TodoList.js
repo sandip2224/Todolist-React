@@ -8,7 +8,7 @@ const TodoList = ({ setTodos, filteredTodos }) => {
                     filteredTodos.map(todo => {
                         return (<Todo
                             text={todo.text}
-                            todos={todos}
+                            todos={filteredTodos}
                             setTodos={setTodos}
                             key={todo.id}
                             todo={todo}
