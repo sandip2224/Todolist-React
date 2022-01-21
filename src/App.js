@@ -14,10 +14,10 @@ function App() {
 	const filterHandler = () => {
 		switch (status) {
 			case 'completed':
-				setfilteredTodos(todos.filter(el => el.completed == true))
+				setfilteredTodos(todos.filter(el => el.completed === true))
 				break
 			case 'uncompleted':
-				setfilteredTodos(todos.filter(el => el.completed == false))
+				setfilteredTodos(todos.filter(el => el.completed === false))
 				break
 			default:
 				setfilteredTodos(todos)
