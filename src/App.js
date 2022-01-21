@@ -26,8 +26,22 @@ function App() {
 	}
 
 	useEffect(() => {
+		getLocalTodos()
+	}, [])
+
+	useEffect(() => {
 		filterHandler()
+		localStorage.setItem('todos', JSON.stringify(todos))
 	}, [todos, status])
+
+	const getLocalTodos = () => {
+		if (localStorage.getItem('todos') === null)
+			localStorage.setItem('todos', JSON.stringify([]))
+		else {
+			let prevTodos = localStorage.getItem('todos')
+			setTodos(JSON.parse(prevTodos))
+		}
+	}
 
 	return (
 		<div className="App">
