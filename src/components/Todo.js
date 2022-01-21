@@ -6,7 +6,6 @@ const Todo = ({ text, todos, setTodos, todo }) => {
     }
 
     const completeHandler = () => {
-        console.log(todo)
         const newTodos = todos.map(el => {
             if (el.id === todo.id) {
                 return {
